@@ -1,6 +1,6 @@
-# 点餐系统
+# 点餐后台管理系统
 
-王丽雅（组长） 组员：王亮 任思明 
+王丽雅（组长） 组员：王亮  任思明 
 
 # 项目说明
 项目基于 elememt-ui样式打造，脚手架的搭建是基于 Vue-cli，具体步骤如下：
@@ -14,8 +14,8 @@
 # 项目文件结构
 - SystemPC（后台管理系统）
   - api
-    -routers[路由配置]
-    -server
+    - routers[路由配置]
+    - server
   - web
     - src [ERP 源代码]
     - assets [静态资源文件]
@@ -25,8 +25,8 @@
   -socket
 - App（移动端App）
   - api
-    -routers[路由配置]
-    -server
+    - routers[路由配置]
+    - server
   - web
     - src [ERP 源代码]
     - assets [静态资源文件]
@@ -35,5 +35,5 @@
     - utils [ajax]
 
 # 项目运行
--详细请看说明文件
+- 详细请看说明文件
 

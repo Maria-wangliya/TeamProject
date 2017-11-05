@@ -1,34 +1,33 @@
 
-github远程地址：git@github.com:ETTTTT/market.git
+github远程地址：git@github.com:Maria-wangliya/TeamProject.git
 
 组员主要分工：
 
 王丽雅（组长）：vue+element-ui搭建基础框架、页面效果、设计移动端数据库
-
 王亮： 后台路由、配置以及后端操作、PC端数据库
-
 任思明： 移动端界面
 
+1.操作注意（PC端）：
 
-操作注意（PC端）：
+（1）SystemPC文件夹内容为PC端相关文件，App文件夹则是移动端相关文件
+（2）mysql数据库（包含PC、移动）：
 
-1.监听端口号：88
+	运行根目录下teamproject.mysql
+（3）PC端打开页面前需要做到：
 
-2.mysql数据库：
+	1）修改component组件中orderList文件夹下 orderlist.vue 文件第178行ws的ip(改成自己的) [ ws = new WebSocket("ws://10.3.131.9:666"); ]
+	2）需要打开3个服务器：与web文件同级下打开node socket、与src同级下打开 npm run dev、api文件中与server.js同级下打开 node server
+（4）如需登录：
 
-	mysqlPC数据库:包含表
-		(login/menu/orderlist/orderlistdown/orderlistundown/memberlist/adminlist/adminlimit)
+	直接用帐号登录：以普通员工身份登录，部分操作权限受到限制。以管理员身份登录，拥有全部操作权限。	
+        例管理员账号：wly 密码：123、 员工账号：www 密码：123
 
-3.打开页面前需要做到：
+2.操作注意（移动端）：
+（1）移动端打开页面前需要做到：
 
-	（1）修改component组建中orderlist.vue文件第178行ws的ip(自己的) [ ws = new WebSocket("ws://10.3.131.9:666"); ]
+	1）修改component组件中orderList文件夹下 waitingpayment.vue 文件 第18行ws的ip(改成自己的) [ ws = new WebSocket("ws://10.3.131.9:666");]
+           以及该文件中 第59行 ip [http://10.3.131.9:100/tijiao]，以上修改端口号及路由不变。
 
-	（2）需要打开3个服务器：
+	2）需要打开2个服务器：与src同级下打开 npm run dev、api文件中与server.js同级下打开 node server
 
-		与web文件同级下打开node socket、web文件下与src同级打开 npm run dev、api文件下与server.js同级打开 node server
-
-4.如需登录：
-
-	直接用帐号登录：以普通员工身份登录，部分操作权限受到限制。以管理员身份登录，拥有全部操作权限。
-	例管理员账号：wly 密码：123、 员工账号：www 密码：123
-
+ （2）可通过打开erweima文件中的html文件，扫一扫进入店铺。
