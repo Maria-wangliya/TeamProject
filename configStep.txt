@@ -8,7 +8,6 @@ github远程地址：git@github.com:Maria-wangliya/TeamProject.git
 任思明： 移动端界面
 
 1.操作注意（PC端）：
-
 （1）SystemPC文件夹内容为PC端相关文件，App文件夹则是移动端相关文件
 （2）mysql数据库（包含PC、移动）：
 
@@ -29,5 +28,7 @@ github远程地址：git@github.com:Maria-wangliya/TeamProject.git
            以及该文件中 第59行 ip [http://10.3.131.9:100/tijiao]，以上修改端口号及路由不变。
 
 	2）需要打开2个服务器：与src同级下打开 npm run dev、api文件中与server.js同级下打开 node server
+       
+        3)以本机电脑ip打开页面,默认是[ http://0.0.0.0:8081/]
 
  （2）可通过打开erweima文件中的html文件，扫一扫进入店铺。
