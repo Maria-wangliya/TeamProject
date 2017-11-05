@@ -13,29 +13,27 @@
 
 # 项目文件结构
 - SystemPC（后台管理系统）
-  -api
+  - api
     -routers[路由配置]
     -server
-  -web
+  - web
     - src [ERP 源代码]
     - assets [静态资源文件]
     - components [Vue 组件]
     - router [路由配置]
     - utils [ajax]
   -socket
--App（移动端App）
-  -api
+- App（移动端App）
+  - api
     -routers[路由配置]
     -server
-  -web
+  - web
     - src [ERP 源代码]
     - assets [静态资源文件]
     - components [Vue 组件]
     - router [路由配置]
     - utils [ajax]
-#项目运行
--详细看说明文件
 
+# 项目运行
+-详细请看说明文件
 
-
-# TeamProject
