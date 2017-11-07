@@ -1,31 +1,33 @@
 /*
-Navicat MySQL Data Transfer
+ Navicat Premium Data Transfer
 
-Source Server         : localhost_wly
-Source Server Version : 50714
-Source Host           : localhost:3306
-Source Database       : teamproject
+ Source Server         : localhost_wly
+ Source Server Type    : MySQL
+ Source Server Version : 50714
+ Source Host           : localhost:3306
+ Source Schema         : teamproject
 
-Target Server Type    : MYSQL
-Target Server Version : 50714
-File Encoding         : 65001
+ Target Server Type    : MySQL
+ Target Server Version : 50714
+ File Encoding         : 65001
 
-Date: 2017-11-05 18:07:18
+ Date: 07/11/2017 21:12:39
 */
 
-SET FOREIGN_KEY_CHECKS=0;
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
 -- Table structure for adminlimit
 -- ----------------------------
 DROP TABLE IF EXISTS `adminlimit`;
-CREATE TABLE `adminlimit` (
-  `id` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `sex` varchar(255) DEFAULT NULL,
-  `limits` varchar(255) DEFAULT NULL,
-  `date` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `adminlimit`  (
+  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `sex` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `limits` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `date` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of adminlimit
@@ -50,16 +52,16 @@ INSERT INTO `adminlimit` VALUES ('16', '王亮', '保密', '管理员', '2017.11
 -- Table structure for adminlist
 -- ----------------------------
 DROP TABLE IF EXISTS `adminlist`;
-CREATE TABLE `adminlist` (
-  `id` varchar(255) DEFAULT NULL,
-  `date` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `sex` varchar(255) DEFAULT NULL,
-  `tel` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `job` varchar(255) DEFAULT NULL,
-  `address` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `adminlist`  (
+  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `date` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `sex` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `tel` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `job` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of adminlist
@@ -84,12 +86,12 @@ INSERT INTO `adminlist` VALUES ('22', '2017.11.01', '王亮', '男', '1376304212
 -- Table structure for login
 -- ----------------------------
 DROP TABLE IF EXISTS `login`;
-CREATE TABLE `login` (
-  `id` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  `limits` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `login`  (
+  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `limits` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of login
@@ -102,16 +104,16 @@ INSERT INTO `login` VALUES ('3', 'www', '123', '员工');
 -- Table structure for memberlist
 -- ----------------------------
 DROP TABLE IF EXISTS `memberlist`;
-CREATE TABLE `memberlist` (
-  `id` varchar(255) DEFAULT NULL,
-  `date` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `sex` varchar(255) DEFAULT NULL,
-  `tel` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `job` varchar(255) DEFAULT NULL,
-  `address` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `memberlist`  (
+  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `date` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `sex` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `tel` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `job` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of memberlist
@@ -140,15 +142,15 @@ INSERT INTO `memberlist` VALUES ('28', '2017.11.01', '王丽雅', '女', '123549
 -- Table structure for menu
 -- ----------------------------
 DROP TABLE IF EXISTS `menu`;
-CREATE TABLE `menu` (
-  `id` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `price` varchar(255) DEFAULT NULL,
-  `type` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  `remark` varchar(255) DEFAULT NULL,
-  `imgurl` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `menu`  (
+  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `price` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `imgurl` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of menu
@@ -156,9 +158,9 @@ CREATE TABLE `menu` (
 INSERT INTO `menu` VALUES ('5', '啤酒鸭', '￥49.00', 'jxrc', '热菜', '2017-10-01T07:37:46.000Z', '');
 INSERT INTO `menu` VALUES ('7', '咖喱鸡块', '￥32.00', 'jxrc', '热菜', '2017-09-12 15:48:05', '');
 INSERT INTO `menu` VALUES ('10', '毛豆虾仁', '￥20.00', 'jxrc', '热菜', '2017-10-10 15:48:19', '');
-INSERT INTO `menu` VALUES ('33', '凉拌土豆片', '￥10.00', 'jzld', '冷碟', '2017-08-20 10:02:30', null);
-INSERT INTO `menu` VALUES ('32', '凉拌粉丝', '￥30.00', 'jzld', '冷碟', '2017-06-10 14:03:40', null);
-INSERT INTO `menu` VALUES ('31', '凉拌黄瓜', '￥18.00', 'jzld', '冷碟', '2017-09-02 16:00:20', null);
+INSERT INTO `menu` VALUES ('33', '凉拌土豆片', '￥10.00', 'jzld', '冷碟', '2017-08-20 10:02:30', NULL);
+INSERT INTO `menu` VALUES ('32', '凉拌粉丝', '￥30.00', 'jzld', '冷碟', '2017-06-10 14:03:40', NULL);
+INSERT INTO `menu` VALUES ('31', '凉拌黄瓜', '￥18.00', 'jzld', '冷碟', '2017-09-02 16:00:20', NULL);
 INSERT INTO `menu` VALUES ('15', '香菇青菜', '￥15.00', 'tsxc', '热菜', '2017-10-17 15:48:37', '');
 INSERT INTO `menu` VALUES ('16', '西芹炒腊肉', '￥28.00', 'tsxc', '热菜', '2017-10-10 15:48:41', '');
 INSERT INTO `menu` VALUES ('17', '双椒鱼头', '￥48.00', 'cfcy', '川府', '2017-10-10 15:48:45', '');
@@ -177,15 +179,15 @@ INSERT INTO `menu` VALUES ('30', '蓝莓汁', '￥16.00', 'jsyl', '冷饮', '201
 -- Table structure for orderlist
 -- ----------------------------
 DROP TABLE IF EXISTS `orderlist`;
-CREATE TABLE `orderlist` (
-  `id` varchar(255) DEFAULT NULL,
-  `num` varchar(255) DEFAULT NULL,
-  `price` varchar(255) DEFAULT NULL,
-  `details` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `type` varchar(255) DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `orderlist`  (
+  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `num` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `price` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `details` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `status` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of orderlist
@@ -243,102 +245,111 @@ INSERT INTO `orderlist` VALUES ('50', '1', ' ￥16.00', 'Fri Nov 03 2017 11:35:1
 INSERT INTO `orderlist` VALUES ('51', '1', ' ￥20.00', 'Fri Nov 03 2017 11:35:30 GMT+0800 (中国标准时间)', ' 冷饮', ' 酒水饮料', '已完成');
 INSERT INTO `orderlist` VALUES ('52', '1', ' ￥28.00', 'Fri Nov 03 2017 11:36:08 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
 INSERT INTO `orderlist` VALUES ('53', '1', ' ￥20.00', 'Fri Nov 03 2017 11:36:13 GMT+0800 (中国标准时间)', ' 冷饮', ' 酒水饮料', '已完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥20.00', 'Sat Nov 04 2017 11:54:07 GMT+0800 (中国标准时间)', ' 冷饮', ' 酒水饮料', '已完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥20.00', 'Sat Nov 04 2017 11:54:10 GMT+0800 (中国标准时间)', ' 冷饮', ' 酒水饮料', '已完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥16.00', 'Sat Nov 04 2017 11:54:14 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '已完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sat Nov 04 2017 14:21:42 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥33.00', 'Sat Nov 04 2017 14:21:53 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥20.00', 'Sat Nov 04 2017 14:23:06 GMT+0800 (中国标准时间)', ' 冷饮', ' 酒水饮料', '已完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥33.00', 'Sat Nov 04 2017 14:24:27 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '已完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sat Nov 04 2017 14:24:34 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sat Nov 04 2017 14:31:05 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥33.00', 'Sat Nov 04 2017 14:31:48 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥30.00', 'Sat Nov 04 2017 14:32:00 GMT+0800 (中国标准时间)', ' 独制苹果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sat Nov 04 2017 14:32:19 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥33.00', 'Sat Nov 04 2017 14:32:40 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sat Nov 04 2017 14:35:24 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sat Nov 04 2017 14:36:01 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '已完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sat Nov 04 2017 16:57:44 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥5.00', 'Sun Nov 05 2017 16:16:43 GMT+0800 (中国标准时间)', ' 苹果汁', ' 冰饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥5.00', 'Sun Nov 05 2017 16:17:03 GMT+0800 (中国标准时间)', ' 苹果汁', ' 冰饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:29:25 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:38:14 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:38:31 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:38:46 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:39:01 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:39:23 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:41:32 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:42:18 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:43:39 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:44:07 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:46:00 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:46:15 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:47:17 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:48:39 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:49:29 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:49:46 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥33.00', 'Sun Nov 05 2017 16:50:03 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:54:42 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:55:23 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥33.00', 'Sun Nov 05 2017 16:55:35 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥16.00', 'Sun Nov 05 2017 16:55:41 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥16.00', 'Sun Nov 05 2017 16:55:46 GMT+0800 (中国标准时间)', ' 青椒炒肉', ' 特色小炒', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:56:56 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥16.00', 'Sun Nov 05 2017 16:57:05 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥33.00', 'Sun Nov 05 2017 16:57:24 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 16:57:28 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥16.00', 'Sun Nov 05 2017 16:57:33 GMT+0800 (中国标准时间)', ' 青椒炒肉', ' 特色小炒', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥16.00', 'Sun Nov 05 2017 16:59:58 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥33.00', 'Sun Nov 05 2017 17:00:03 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:00:33 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:00:44 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥33.00', 'Sun Nov 05 2017 17:00:49 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥16.00', 'Sun Nov 05 2017 17:00:57 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥16.00', 'Sun Nov 05 2017 17:01:04 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥16.00', 'Sun Nov 05 2017 17:01:16 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥16.00', 'Sun Nov 05 2017 17:02:05 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥33.00', 'Sun Nov 05 2017 17:02:53 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:02:58 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥16.00', 'Sun Nov 05 2017 17:03:05 GMT+0800 (中国标准时间)', ' 青椒炒肉', ' 特色小炒', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥33.00', 'Sun Nov 05 2017 17:03:11 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:04:11 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥16.00', 'Sun Nov 05 2017 17:04:39 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:04:54 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥33.00', 'Sun Nov 05 2017 17:05:08 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥16.00', 'Sun Nov 05 2017 17:05:57 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥16.00', 'Sun Nov 05 2017 17:06:18 GMT+0800 (中国标准时间)', ' 青椒炒肉', ' 特色小炒', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:06:50 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥33.00', 'Sun Nov 05 2017 17:07:53 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥16.00', 'Sun Nov 05 2017 17:08:41 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥16.00', 'Sun Nov 05 2017 17:10:03 GMT+0800 (中国标准时间)', ' 青椒炒肉', ' 特色小炒', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:11:43 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:12:04 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥33.00', 'Sun Nov 05 2017 17:12:08 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:14:20 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:16:48 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:16:57 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:18:28 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:28:03 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:28:45 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:35:53 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥33.00', 'Sun Nov 05 2017 17:36:00 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥33.00', 'Sun Nov 05 2017 17:36:35 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:38:45 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '已完成');
-INSERT INTO `orderlist` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:39:22 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥20.00', 'Sat Nov 04 2017 11:54:07 GMT+0800 (中国标准时间)', ' 冷饮', ' 酒水饮料', '已完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥20.00', 'Sat Nov 04 2017 11:54:10 GMT+0800 (中国标准时间)', ' 冷饮', ' 酒水饮料', '已完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥16.00', 'Sat Nov 04 2017 11:54:14 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '已完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sat Nov 04 2017 14:21:42 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥33.00', 'Sat Nov 04 2017 14:21:53 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥20.00', 'Sat Nov 04 2017 14:23:06 GMT+0800 (中国标准时间)', ' 冷饮', ' 酒水饮料', '已完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥33.00', 'Sat Nov 04 2017 14:24:27 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '已完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sat Nov 04 2017 14:24:34 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sat Nov 04 2017 14:31:05 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥33.00', 'Sat Nov 04 2017 14:31:48 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥30.00', 'Sat Nov 04 2017 14:32:00 GMT+0800 (中国标准时间)', ' 独制苹果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sat Nov 04 2017 14:32:19 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥33.00', 'Sat Nov 04 2017 14:32:40 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sat Nov 04 2017 14:35:24 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sat Nov 04 2017 14:36:01 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '已完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sat Nov 04 2017 16:57:44 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥5.00', 'Sun Nov 05 2017 16:16:43 GMT+0800 (中国标准时间)', ' 苹果汁', ' 冰饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥5.00', 'Sun Nov 05 2017 16:17:03 GMT+0800 (中国标准时间)', ' 苹果汁', ' 冰饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:29:25 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:38:14 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:38:31 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:38:46 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:39:01 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:39:23 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:41:32 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:42:18 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:43:39 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:44:07 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:46:00 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:46:15 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:47:17 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:48:39 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:49:29 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:49:46 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥33.00', 'Sun Nov 05 2017 16:50:03 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:54:42 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:55:23 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥33.00', 'Sun Nov 05 2017 16:55:35 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥16.00', 'Sun Nov 05 2017 16:55:41 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥16.00', 'Sun Nov 05 2017 16:55:46 GMT+0800 (中国标准时间)', ' 青椒炒肉', ' 特色小炒', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:56:56 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥16.00', 'Sun Nov 05 2017 16:57:05 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥33.00', 'Sun Nov 05 2017 16:57:24 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 16:57:28 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥16.00', 'Sun Nov 05 2017 16:57:33 GMT+0800 (中国标准时间)', ' 青椒炒肉', ' 特色小炒', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥16.00', 'Sun Nov 05 2017 16:59:58 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥33.00', 'Sun Nov 05 2017 17:00:03 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:00:33 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:00:44 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥33.00', 'Sun Nov 05 2017 17:00:49 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥16.00', 'Sun Nov 05 2017 17:00:57 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥16.00', 'Sun Nov 05 2017 17:01:04 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥16.00', 'Sun Nov 05 2017 17:01:16 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥16.00', 'Sun Nov 05 2017 17:02:05 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥33.00', 'Sun Nov 05 2017 17:02:53 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:02:58 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥16.00', 'Sun Nov 05 2017 17:03:05 GMT+0800 (中国标准时间)', ' 青椒炒肉', ' 特色小炒', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥33.00', 'Sun Nov 05 2017 17:03:11 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:04:11 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥16.00', 'Sun Nov 05 2017 17:04:39 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:04:54 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥33.00', 'Sun Nov 05 2017 17:05:08 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥16.00', 'Sun Nov 05 2017 17:05:57 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥16.00', 'Sun Nov 05 2017 17:06:18 GMT+0800 (中国标准时间)', ' 青椒炒肉', ' 特色小炒', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:06:50 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥33.00', 'Sun Nov 05 2017 17:07:53 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥16.00', 'Sun Nov 05 2017 17:08:41 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥16.00', 'Sun Nov 05 2017 17:10:03 GMT+0800 (中国标准时间)', ' 青椒炒肉', ' 特色小炒', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:11:43 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:12:04 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥33.00', 'Sun Nov 05 2017 17:12:08 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:14:20 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:16:48 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:16:57 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:18:28 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:28:03 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:28:45 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:35:53 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥33.00', 'Sun Nov 05 2017 17:36:00 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥33.00', 'Sun Nov 05 2017 17:36:35 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:38:45 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '已完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:39:22 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 18:54:26 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 18:54:40 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '已完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥28.00', 'Mon Nov 06 2017 10:49:07 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '已完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥30.00', 'Mon Nov 06 2017 10:54:27 GMT+0800 (中国标准时间)', ' 爱心蛋糕', ' 精品点心', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥30.00', 'Mon Nov 06 2017 10:55:59 GMT+0800 (中国标准时间)', ' 爱心蛋糕', ' 精品点心', '已完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥30.00', 'Mon Nov 06 2017 16:32:04 GMT+0800 (中国标准时间)', ' 爱心蛋糕', ' 精品点心', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥20.00', 'Mon Nov 06 2017 16:32:26 GMT+0800 (中国标准时间)', ' 红枣面包', ' 精品点心', '未完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥20.00', 'Mon Nov 06 2017 16:32:36 GMT+0800 (中国标准时间)', ' 红枣面包', ' 精品点心', '已完成');
+INSERT INTO `orderlist` VALUES (NULL, '1', ' ￥20.00', 'Mon Nov 06 2017 16:35:20 GMT+0800 (中国标准时间)', ' 红枣面包', ' 精品点心', '未完成');
 
 -- ----------------------------
 -- Table structure for orderlistdown
 -- ----------------------------
 DROP TABLE IF EXISTS `orderlistdown`;
-CREATE TABLE `orderlistdown` (
-  `id` varchar(255) DEFAULT NULL,
-  `num` varchar(255) DEFAULT NULL,
-  `price` varchar(255) DEFAULT NULL,
-  `details` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `type` varchar(255) DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `orderlistdown`  (
+  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `num` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `price` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `details` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `status` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of orderlistdown
@@ -358,47 +369,52 @@ INSERT INTO `orderlistdown` VALUES ('12', '1', ' ￥5.00', 'Fri Nov 03 2017 11:3
 INSERT INTO `orderlistdown` VALUES ('13', '1', ' ￥16.00', 'Fri Nov 03 2017 11:35:15 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '已完成');
 INSERT INTO `orderlistdown` VALUES ('14', '1', ' ￥20.00', 'Fri Nov 03 2017 11:35:30 GMT+0800 (中国标准时间)', ' 冷饮', ' 酒水饮料', '已完成');
 INSERT INTO `orderlistdown` VALUES ('15', '1', ' ￥20.00', 'Fri Nov 03 2017 11:36:13 GMT+0800 (中国标准时间)', ' 冷饮', ' 酒水饮料', '已完成');
-INSERT INTO `orderlistdown` VALUES (null, '1', ' ￥20.00', 'Sat Nov 04 2017 11:54:07 GMT+0800 (中国标准时间)', ' 冷饮', ' 酒水饮料', '已完成');
-INSERT INTO `orderlistdown` VALUES (null, '1', ' ￥20.00', 'Sat Nov 04 2017 11:54:10 GMT+0800 (中国标准时间)', ' 冷饮', ' 酒水饮料', '已完成');
-INSERT INTO `orderlistdown` VALUES (null, '1', ' ￥16.00', 'Sat Nov 04 2017 11:54:14 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '已完成');
-INSERT INTO `orderlistdown` VALUES (null, '1', ' ￥20.00', 'Sat Nov 04 2017 14:23:06 GMT+0800 (中国标准时间)', ' 冷饮', ' 酒水饮料', '已完成');
-INSERT INTO `orderlistdown` VALUES (null, '1', ' ￥33.00', 'Sat Nov 04 2017 14:24:27 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '已完成');
-INSERT INTO `orderlistdown` VALUES (null, '1', ' ￥28.00', 'Sat Nov 04 2017 14:36:01 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '已完成');
-INSERT INTO `orderlistdown` VALUES (null, '1', ' ￥28.00', 'Sun Nov 05 2017 17:38:45 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '已完成');
+INSERT INTO `orderlistdown` VALUES (NULL, '1', ' ￥20.00', 'Sat Nov 04 2017 11:54:07 GMT+0800 (中国标准时间)', ' 冷饮', ' 酒水饮料', '已完成');
+INSERT INTO `orderlistdown` VALUES (NULL, '1', ' ￥20.00', 'Sat Nov 04 2017 11:54:10 GMT+0800 (中国标准时间)', ' 冷饮', ' 酒水饮料', '已完成');
+INSERT INTO `orderlistdown` VALUES (NULL, '1', ' ￥16.00', 'Sat Nov 04 2017 11:54:14 GMT+0800 (中国标准时间)', ' 美味橙汁', ' 精致冷饮', '已完成');
+INSERT INTO `orderlistdown` VALUES (NULL, '1', ' ￥20.00', 'Sat Nov 04 2017 14:23:06 GMT+0800 (中国标准时间)', ' 冷饮', ' 酒水饮料', '已完成');
+INSERT INTO `orderlistdown` VALUES (NULL, '1', ' ￥33.00', 'Sat Nov 04 2017 14:24:27 GMT+0800 (中国标准时间)', ' 排毒苦瓜汁', ' 精致冷饮', '已完成');
+INSERT INTO `orderlistdown` VALUES (NULL, '1', ' ￥28.00', 'Sat Nov 04 2017 14:36:01 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '已完成');
+INSERT INTO `orderlistdown` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 17:38:45 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '已完成');
+INSERT INTO `orderlistdown` VALUES (NULL, '1', ' ￥28.00', 'Sun Nov 05 2017 18:54:40 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '已完成');
+INSERT INTO `orderlistdown` VALUES (NULL, '1', ' ￥28.00', 'Mon Nov 06 2017 10:49:07 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '已完成');
+INSERT INTO `orderlistdown` VALUES (NULL, '1', ' ￥30.00', 'Mon Nov 06 2017 10:55:59 GMT+0800 (中国标准时间)', ' 爱心蛋糕', ' 精品点心', '已完成');
+INSERT INTO `orderlistdown` VALUES (NULL, '1', ' ￥20.00', 'Mon Nov 06 2017 16:32:36 GMT+0800 (中国标准时间)', ' 红枣面包', ' 精品点心', '已完成');
 
 -- ----------------------------
 -- Table structure for orderlistundown
 -- ----------------------------
 DROP TABLE IF EXISTS `orderlistundown`;
-CREATE TABLE `orderlistundown` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `num` varchar(255) DEFAULT NULL,
-  `price` varchar(255) DEFAULT NULL,
-  `details` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `type` varchar(255) DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=69 DEFAULT CHARSET=utf8;
+CREATE TABLE `orderlistundown`  (
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `num` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `price` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `details` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `status` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 74 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of orderlistundown
 -- ----------------------------
-INSERT INTO `orderlistundown` VALUES ('68', '1', ' ￥28.00', 'Sun Nov 05 2017 17:39:22 GMT+0800 (中国标准时间)', ' 奇异果汁', ' 精致冷饮', '未完成');
+INSERT INTO `orderlistundown` VALUES (71, '1', ' ￥30.00', 'Mon Nov 06 2017 16:32:04 GMT+0800 (中国标准时间)', ' 爱心蛋糕', ' 精品点心', '未完成');
+INSERT INTO `orderlistundown` VALUES (73, '1', ' ￥20.00', 'Mon Nov 06 2017 16:35:20 GMT+0800 (中国标准时间)', ' 红枣面包', ' 精品点心', '未完成');
 
 -- ----------------------------
 -- Table structure for telchuanfu
 -- ----------------------------
 DROP TABLE IF EXISTS `telchuanfu`;
-CREATE TABLE `telchuanfu` (
-  `id` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `price` varchar(255) DEFAULT NULL,
-  `type` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  `remark` varchar(255) DEFAULT NULL,
-  `imgurl` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `telchuanfu`  (
+  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `price` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `imgurl` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of telchuanfu
@@ -414,15 +430,15 @@ INSERT INTO `telchuanfu` VALUES ('6', '剁椒鱼头', '￥48.00', 'cfcy', '川�
 -- Table structure for telcolddrink
 -- ----------------------------
 DROP TABLE IF EXISTS `telcolddrink`;
-CREATE TABLE `telcolddrink` (
-  `id` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `price` varchar(255) DEFAULT NULL,
-  `type` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  `remark` varchar(255) DEFAULT NULL,
-  `imgurl` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `telcolddrink`  (
+  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `price` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `imgurl` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of telcolddrink
@@ -438,15 +454,15 @@ INSERT INTO `telcolddrink` VALUES ('6', '哈蜜瓜汁', '￥36.00', 'jsyl', '冷
 -- Table structure for teldianxin
 -- ----------------------------
 DROP TABLE IF EXISTS `teldianxin`;
-CREATE TABLE `teldianxin` (
-  `id` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `price` varchar(255) DEFAULT NULL,
-  `type` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  `remark` varchar(255) DEFAULT NULL,
-  `imgurl` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `teldianxin`  (
+  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `price` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `imgurl` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of teldianxin
@@ -462,15 +478,15 @@ INSERT INTO `teldianxin` VALUES ('6', '红枣面包', '￥20.00', 'jpdx', '点�
 -- Table structure for teldrink
 -- ----------------------------
 DROP TABLE IF EXISTS `teldrink`;
-CREATE TABLE `teldrink` (
-  `id` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `price` varchar(255) DEFAULT NULL,
-  `type` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  `remark` varchar(255) DEFAULT NULL,
-  `imgurl` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `teldrink`  (
+  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `price` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `imgurl` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of teldrink
@@ -486,15 +502,15 @@ INSERT INTO `teldrink` VALUES ('6', 'Rio', '￥20.00', 'jsyl', '酒水饮料', '
 -- Table structure for telhotdish
 -- ----------------------------
 DROP TABLE IF EXISTS `telhotdish`;
-CREATE TABLE `telhotdish` (
-  `id` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `price` varchar(255) DEFAULT NULL,
-  `type` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  `remark` varchar(255) DEFAULT NULL,
-  `imgurl` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `telhotdish`  (
+  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `price` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `imgurl` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of telhotdish
@@ -511,15 +527,15 @@ INSERT INTO `telhotdish` VALUES ('7', '美味披萨', '￥39.00', 'jxrc', '热�
 -- Table structure for telxiaochao
 -- ----------------------------
 DROP TABLE IF EXISTS `telxiaochao`;
-CREATE TABLE `telxiaochao` (
-  `id` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `price` varchar(255) DEFAULT NULL,
-  `type` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  `remark` varchar(255) DEFAULT NULL,
-  `imgurl` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `telxiaochao`  (
+  `id` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `price` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `imgurl` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of telxiaochao
@@ -530,4 +546,5 @@ INSERT INTO `telxiaochao` VALUES ('3', '美味烤鸭', '￥13.00', 'tsxc', '小�
 INSERT INTO `telxiaochao` VALUES ('4', '豆角炒肉', '￥10.00', 'tsxc', '小炒', '2017-10-02 17:10:00', '../../../static/img/foods/xiaochao4.jpg');
 INSERT INTO `telxiaochao` VALUES ('5', '小炒芹菜', '￥18.00', 'tsxc', '小炒', '2017-10-02 17:10:00', '../../../static/img/foods/xiaochao5.jpg');
 INSERT INTO `telxiaochao` VALUES ('6', '青椒炒肉', '￥16.00', 'tsxc', '小炒', '2017-10-02 17:10:00', '../../../static/img/foods/xiaochao5.jpg');
-SET FOREIGN_KEY_CHECKS=1;
+
+SET FOREIGN_KEY_CHECKS = 1;

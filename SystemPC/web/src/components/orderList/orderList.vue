@@ -175,7 +175,7 @@
 		},
 		mounted: function() {
 			var self = this;
-			ws = new WebSocket("ws://10.3.131.9:666");
+			ws = new WebSocket("ws://10.3.131.12:666");
 			ws.onmessage = function(_msg) {
 				if(_msg.data == "您有新订单") {
 					self.open3();
