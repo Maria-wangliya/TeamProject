@@ -76,6 +76,7 @@
 
 <script type="text/javascript">
 	import http from '../../utils/httpClient.js'
+	import http2 from './../../assets/common'
 	import './orderList.scss'
 	import $ from 'jquery'
 	var ws;
@@ -175,7 +176,7 @@
 		},
 		mounted: function() {
 			var self = this;
-			ws = new WebSocket("ws://10.3.131.12:666");
+			ws = new WebSocket(http2.url2);
 			ws.onmessage = function(_msg) {
 				if(_msg.data == "您有新订单") {
 					self.open3();

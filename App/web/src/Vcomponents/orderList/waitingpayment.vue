@@ -14,8 +14,9 @@
 </template>
 <script>
     import $ from "jquery"
+    import http from './../../assets/common'
     var ws;
-    ws = new WebSocket("ws://10.3.131.12:666");
+    ws = new WebSocket(http.url2);
     ws.onmessage = function(_msg) {
         if(_msg.data !== "您有新订单"){
             alert(_msg.data)
@@ -56,7 +57,7 @@
                 var now1 = Date.parse(now)*1 + 1800000;
                 this.two = true;
                 var self = this;
-                $.post("http://10.3.131.12:100/tijiao", {type:type, foodName:foodName, price:price, num:num}, function(res){
+                $.post(http.url+"tijiao", {type:type, foodName:foodName, price:price, num:num}, function(res){
                     $($(event.target).parents(".top1").children(".allDiv").find("i").eq(0)).html(`${res.message[0].id}号`)
                     console.log(res)
                     if(res.status){

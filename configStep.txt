@@ -14,7 +14,7 @@ github远程地址：git@github.com:Maria-wangliya/TeamProject.git
 	运行根目录下teamproject.mysql
 （3）PC端打开页面前需要做到：
 
-	1）修改component组件中orderList文件夹下 orderlist.vue 文件第178行ws的ip(改成自己的) [ ws = new WebSocket("ws://10.3.131.9:666"); ]
+	1）修改src下assets中common.js中url
 	2）需要打开3个服务器：与web文件同级下打开node socket、与src同级下打开 npm run dev、api文件中与server.js同级下打开 node server
 （4）如需登录：
 
@@ -24,8 +24,7 @@ github远程地址：git@github.com:Maria-wangliya/TeamProject.git
 2.操作注意（移动端）：
 （1）移动端打开页面前需要做到：
 
-	1）修改component组件中orderList文件夹下 waitingpayment.vue 文件 第18行ws的ip(改成自己的) [ ws = new WebSocket("ws://10.3.131.9:666");]
-           以及该文件中 第59行 ip [http://10.3.131.9:100/tijiao]，以上修改端口号及路由不变。
+	1）修改src下assets中common.js中url
 
 	2）需要打开2个服务器：与src同级下打开 npm run dev、api文件中与server.js同级下打开 node server
        
