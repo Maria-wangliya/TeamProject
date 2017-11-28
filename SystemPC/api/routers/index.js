@@ -11,6 +11,7 @@ var productRouter = require('./product');
 var wlyRouter = require('./wlyGetData');
 
 var wlAll =  require('./wlAll');
+var path = require('path');
 
 var app = express();
 
@@ -38,5 +39,8 @@ module.exports ={
 		wlAll.wlAll(app);
 		
 		app.listen(port);
+
+		app.use(express.static(path.join(__dirname, '../')));
+		console.log(path.join(__dirname, '../'));
 	}
 }

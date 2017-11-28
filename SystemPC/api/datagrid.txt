@@ -1,0 +1,30 @@
+{
+    "Fields": "indexid,name,price,type,description,remark",
+    "HideFields": "indexid",
+    "Key": "indexid",
+    "Delete": true,
+    "DeleteUrl": "http://localhost:88/delete",
+    "Detail": true,
+    "DetailUrl": "StudentDetail",
+    "FiledAttributes": {
+        "time": {
+            "Type": "DateTime",
+            "Format": "MM/dd/yyyy hh:mm:ss"
+        },
+        "price": {
+            "Type": "Replace",
+            "Format": "(.).+",
+            "ReplaceVal": "$1**"
+        },
+        "type": {
+            "Type": "Replace",
+            "Format": "(\\d{3}).+(\\d{4})",
+            "ReplaceVal": "$1****$2"
+        },
+        "name":{
+            "Type": "Replace",
+            "Format": "(.).+",
+            "ReplaceVal": "$1**"
+        }       
+    }
+}
