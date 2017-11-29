@@ -44,7 +44,7 @@
       },
       methods:{
         backMenu(){
-          router.push({name:'menu'});
+           router.push({name:'VHome'});
         },
         buy(event,id){
           if(event.target.className == 'el-icon-plus'){

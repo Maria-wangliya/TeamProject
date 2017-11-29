@@ -47,7 +47,7 @@
       },
       methods:{
         backMenu(){
-          router.push({name:'menu'});
+           router.push({name:'VHome'});
         },
         handleChange(value) {
         },

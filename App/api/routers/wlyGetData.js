@@ -75,7 +75,14 @@ module.exports = {
             })
         })
 
-
+        app.get('/getHome', function(request, response){
+            //在这个位置处理传过来的参数
+            var argument = request.body;
+            var order = 'select * from telhome';
+            db.select(order, function(restul){
+                response.send(restul);
+            })
+        })
         app.get('/getMembers2', function(request, response){
             //在这个位置处理传过来的参数
             var argument = request.body;
@@ -86,6 +93,7 @@ module.exports = {
                 response.send(result);
             })
         })
+
         app.get('/getAdmin2', function(request, response){
             //在这个位置处理传过来的参数
             var argument = request.body;
