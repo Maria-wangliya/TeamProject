@@ -8,7 +8,8 @@ github远程地址：git@github.com:Maria-wangliya/TeamProject.git
 任思明： 移动端界面
 
 1.操作注意（PC端）：
-（1）SystemPC文件夹内容为PC端相关文件，App文件夹则是移动端相关文件
+（1）SystemPC文件夹内容为PC端相关文件，App文件夹则是移动端相关文件,相关build文件分别在对应的src下dist文件夹中。
+
 （2）mysql数据库（包含PC、移动）：
 
 	运行根目录下teamproject.mysql
