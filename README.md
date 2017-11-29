@@ -17,7 +17,7 @@
     - routers[路由配置]
     - server
   - web
-    - src [ERP 源代码]
+    - src [源代码]
     - assets [静态资源文件]
     - components [Vue 组件]
     - router [路由配置]
@@ -28,7 +28,7 @@
     - routers[路由配置]
     - server
   - web
-    - src [ERP 源代码]
+    - src [源代码]
     - assets [静态资源文件]
     - components [Vue 组件]
     - router [路由配置]
