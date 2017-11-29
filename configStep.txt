@@ -12,7 +12,9 @@ github远程地址：git@github.com:Maria-wangliya/TeamProject.git
 
 （2）mysql数据库（包含PC、移动）：
 
+	数据库名称：teamproject
 	运行根目录下teamproject.mysql
+
 （3）PC端打开页面前需要做到：
 
 	1）修改src下assets中common.js中url
